@@ -14,8 +14,10 @@ const index = async (exchange?: string) => {
 }
 
 const startExchange = (exchangeFilePath: string) => {
-    console.debug('path::', exchangeFilePath)
-    require(exchangeFilePath).start()
+    console.debug('path::', exchangeFilePath);
+    const Ticker = require(exchangeFilePath).default;
+    const instance = new Ticker();
+    void instance.start();
 }
 
 export default index;
