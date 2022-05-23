@@ -1,0 +1,12 @@
+.DS_store
+.env
+dist/
+node_modules/
+
+# IntelliJ project files
+.idea
+.idea/
+*.iml
+out
+gen
+
